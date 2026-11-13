@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Course Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="dist/main.js"></script>
+</head>
+<body>
+
+    <!-- Encabezado: logotipo (texto) y menú de navegación -->
+    <header>
+        <div class="logo">NovaTech SAP Consulting</div>
+        <nav>
+            <ul>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Mis cursos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>SAP Course Catalog</h1>
+
+        <!-- Zona de filtros: no es un <form>, así no se envía nada ni se recarga la página -->
+        <section class="filters">
+            <label for="search">Buscar por título:</label>
+            <input type="text" id="search" placeholder="Ej: ABAP, Fiori...">
+
+            <label for="level">Nivel:</label>
+            <select id="level">
+                <option value="All">All</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </section>
+
+        <!-- Contenedor de las tarjetas de cursos -->
+        <!-- Las tarjetas se generan dinámicamente desde app.js -->
+        <div id="catalog"></div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 NovaTech SAP Consulting</p>
+    </footer>
+
+</body>
+</html>

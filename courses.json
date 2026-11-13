@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Introducción a SAP S/4HANA",
+        "level": "Beginner",
+        "duration": 8,
+        "description": "Conceptos básicos de SAP S/4HANA, navegación por el sistema y principales módulos."
+    },
+    {
+        "title": "Fundamentos de SAP Fiori",
+        "level": "Beginner",
+        "duration": 12,
+        "description": "Experiencia de usuario en SAP Fiori: launchpad, tipos de aplicaciones y personalización."
+    },
+    {
+        "title": "HTML, CSS y JavaScript para SAPUI5",
+        "level": "Beginner",
+        "duration": 16,
+        "description": "Fundamentos web necesarios antes de empezar a desarrollar aplicaciones con SAPUI5."
+    },
+    {
+        "title": "Programación ABAP",
+        "level": "Intermediate",
+        "duration": 20,
+        "description": "Desarrollo de reportes, estructuras de datos y lógica de negocio con el lenguaje ABAP."
+    },
+    {
+        "title": "Servicios OData con SAP Gateway",
+        "level": "Intermediate",
+        "duration": 16,
+        "description": "Creación y consumo de servicios OData para exponer datos de SAP a aplicaciones web."
+    },
+    {
+        "title": "SAP Business Technology Platform",
+        "level": "Intermediate",
+        "duration": 24,
+        "description": "Servicios de la plataforma BTP: cuentas, entornos Cloud Foundry y despliegue de aplicaciones."
+    },
+    {
+        "title": "Desarrollo de apps con SAPUI5",
+        "level": "Advanced",
+        "duration": 32,
+        "description": "Creación de aplicaciones web empresariales con SAPUI5, patrón MVC y servicios OData."
+    },
+    {
+        "title": "ABAP RESTful Application Programming",
+        "level": "Advanced",
+        "duration": 40,
+        "description": "Modelo RAP: CDS views, behavior definitions y servicios para aplicaciones Fiori."
+    },
+    {
+        "title": "Integración con C++ y SAP NetWeaver RFC",
+        "level": "Advanced",
+        "duration": 18,
+        "description": "Conexión de programas externos en C++ con sistemas SAP mediante la librería NW RFC SDK."
+    }
+]

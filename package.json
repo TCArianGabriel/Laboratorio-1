@@ -1,0 +1,16 @@
+{
+  "name": "laboratorio-1",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "SAP Course Catalog",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
