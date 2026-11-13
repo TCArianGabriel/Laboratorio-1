@@ -16,7 +16,7 @@ function showMessage(text: string, isError: boolean = false): void {
 }
 
 // ===== Renderizar el catálogo =====
-function renderCatalog(courses: Course[]): void {
+function renderCatalog(courses: Course[], searchText: string = ""): void {
     try {
         const catalog = document.getElementById("catalog") as HTMLDivElement | null;
 
@@ -35,7 +35,7 @@ function renderCatalog(courses: Course[]): void {
         // Renderizar cada curso con su método render()
         let html = "";
         for (const course of courses) {
-            html += course.render();
+            html += course.render(searchText);
         }
         catalog.innerHTML = html;
     } catch (error: unknown) {
@@ -58,7 +58,7 @@ function filterCourses(courses: Course[], level: string, searchText: string): Co
 // ===== Aplicar ambos filtros y volver a renderizar =====
 function applyFilters(): void {
     const filtered = filterCourses(allCourses, levelSelect.value, searchInput.value);
-    renderCatalog(filtered);
+    renderCatalog(filtered, searchInput.value);
 }
 
 // ===== Cargar los cursos desde el archivo JSON =====

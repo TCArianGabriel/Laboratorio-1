@@ -19,6 +19,30 @@ function escapeHtml(text: string): string {
         .replace(/'/g, "&#39;");
 }
 
+// Escapa los caracteres especiales de expresiones regulares (por ejemplo "C++")
+function escapeRegExp(text: string): string {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Devuelve el texto con las coincidencias de "search" envueltas en <strong>
+function highlightText(text: string, search: string): string {
+    const term = search.trim();
+    if (term === "") {
+        return escapeHtml(text);
+    }
+
+    const regex = new RegExp(`(${escapeRegExp(term)})`, "gi");
+
+    // Al usar un grupo ( ) en split, las coincidencias quedan en las posiciones impares
+    return text
+        .split(regex)
+        .map((part: string, index: number): string =>
+            index % 2 === 1 ? `<strong>${escapeHtml(part)}</strong>` : escapeHtml(part)
+        )
+        .join("");
+}
+
+
 // Clase Course que implementa la interfaz ICourse
 export class Course implements ICourse {
     title: string;
@@ -34,10 +58,10 @@ export class Course implements ICourse {
     }
 
     // Devuelve el HTML de la tarjeta del curso como string
-    render(): string {
+    render(searchText: string = ""): string {
         return `
             <article class="course-card">
-                <h2>${escapeHtml(this.title)}</h2>
+                <h2>${highlightText(this.title, searchText)}</h2>
                 <p class="level ${this.level.toLowerCase()}">${this.level}</p>
                 <p class="duration">Duración: ${this.duration} horas</p>
                 <p class="description">${escapeHtml(this.description)}</p>
